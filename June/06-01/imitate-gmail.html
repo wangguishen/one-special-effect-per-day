@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>仿制 gmail 的页面布局</title>
+	<link rel="shortcut icon" type="image/x-icon" href="imitate.ico" rel="external nofollow">
+	<link rel="stylesheet" href="imitate-gmail.css">
+</head>
+<body>
+  <section class="sidebar">
+    <div class="sidebar--inner">
+      <div class="is-settings--parent">
+        <figure class="avatarImg">
+          <img src="https://gmailapp.surge.sh/assets/images/userimg.jpg" alt="">
+        </figure>
+        <div class="settings-el">
+          <div class="triangle"></div>
+          <div class="settings--options">
+            <ul>
+              <li class="current-account">kenny.krosky@gmail.com</li>
+              <li>kroskykenny@gmail.com</li>
+              <li>kenny@gmail.com</li>
+            </ul>
+            <div class="opt">
+              <div class="opt-item" id="isAccount">
+                <span>My Account</span>
+              </div>
+              <div class="opt-item" id="isSettings">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar-menu">
+        <ul>
+          <li class="inboxItem isActive"><a href="#0">Inbox (<span class="numCount">3</span>)</a></li>
+          <li class="sentItem"><a href="#0">Sent</a></li>
+          <li class="starredItem"><a href="#0">Starred</a></li>
+          <li class="spamItem"><a href="#0">Spam</a></li>
+          <li class="trashItem"><a href="#0">Trash</a></li>
+        </ul>
+      </div>
+      <div class="hangout-bubbles">
+        <!-- pencil to create new hangout chat -->
+        <div class="is-bubble is-hangout-contact" data-name="Create Message" data-email="" data-image="" data-message="">
+        	<svg class="pencil" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 32 40" enable-background="new 0 0 32 32" xml:space="preserve">
+        		<path d="M25.517,3.254l-3.385-2.127c-0.854-0.536-1.979-0.278-2.517,0.575l-1.334,2.123l6.474,4.066L26.09,5.77  C26.626,4.915,26.371,3.789,25.517,3.254z M6.763,22.168l6.474,4.064L23.788,9.436L17.31,5.368L6.763,22.168z M5.772,27.334  l-0.143,3.818l3.379-1.787l3.14-1.658l-6.246-3.926L5.772,27.334z"/>
+        		<text x="0" y="47" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">Created by Dmitry Baranovskiy</text>
+        		<text x="0" y="52" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">from the Noun Project</text>
+        	</svg>
+          <div class="create-msg">
+            <span class="alert-num">
+              <svg class="add-chat" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
+              	<line x1="18" y1="6" x2="6" y2="18"></line>
+              	<line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <!-- The Hangout Users -->
+        <div class="is-bubble is-hangout-contact " data-name="Ramey Krosky" data-email="ramey.krosky@gmail.com" data-image="https://gmailapp.surge.sh/assets/images/ramey.jpg" data-message=": Babe! Please grab some eggs on the way home today! Thanks!">
+          <img src="https://gmailapp.surge.sh/assets/images/ramey.jpg" alt="">
+        </div>
+        <div class="is-bubble is-hangout-contact " data-name="Doug Jay" data-email="dougiefresh@gmail.com" data-image="https://gmailapp.surge.sh/assets/images/dougjay.jpg" data-message=": Kenny, what is the deal with you and coffee? Just relax man! You&#x27;re gonna miss out on some good sleeping patterns.">
+          <img src="https://gmailapp.surge.sh/assets/images/dougjay.jpg" alt="">
+        </div>
+        <div class="is-bubble is-hangout-contact has-notification-alert" data-name="Brad Smith" data-email="mrsmithbrad@gmail.com" data-image="https://gmailapp.surge.sh/assets/images/bradsmith.jpg" data-message=": Ayo, How did that Google challenge go?">
+          <img src="https://gmailapp.surge.sh/assets/images/bradsmith.jpg" alt="">
+          <div class="notify-bubble">
+            <span class="alert-num">1</span>
+          </div>
+        </div>
+        <!-- Notifcation bubble -->
+        <div class="is-bubble is-notify">
+          <svg class="messageIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+          	<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+          <div class="closeCross">
+            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </div>
+          <div class="notify-bubble main-notify">
+            <span class="alert-num">1</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="client-nav">
+    <div class="client-nav--inner">
+      <figure class="logo">
+        <img src="https://gmailapp.surge.sh/assets/images/logo.png" alt="">
+      </figure>
+      <div class="menTabParent">
+        <div class="menuTab">
+          <svg class="menuIcon" viewBox="0 0 20 20" version="1.1">
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="noun_797089_cc" fill="#000000" fill-rule="nonzero">
+                <g id="Group">
+                  <path d="M12.1,7.5 L7.9,7.5 C7.7,7.5 7.5,7.7 7.5,7.9 L7.5,12.1 C7.5,12.3 7.7,12.5 7.9,12.5 L12.1,12.5 C12.3,12.5 12.5,12.3 12.5,12.1 L12.5,7.9 C12.5,7.7 12.3,7.5 12.1,7.5 Z" id="Shape"></path>
+                  <path d="M19.1,14.5 L14.9,14.5 C14.7,14.5 14.5,14.7 14.5,14.9 L14.5,19.1 C14.5,19.3 14.7,19.5 14.9,19.5 L19.1,19.5 C19.3,19.5 19.5,19.3 19.5,19.1 L19.5,14.9 C19.5,14.7 19.3,14.5 19.1,14.5 Z" id="Shape"></path>
+                  <path d="M5.1,7.5 L0.9,7.5 C0.7,7.5 0.5,7.7 0.5,7.9 L0.5,12.1 C0.5,12.3 0.7,12.5 0.9,12.5 L5.1,12.5 C5.3,12.5 5.5,12.3 5.5,12.1 L5.5,7.9 C5.5,7.7 5.3,7.5 5.1,7.5 Z" id="Shape"></path>
+                  <path d="M19.1,7.5 L14.9,7.5 C14.7,7.5 14.5,7.7 14.5,7.9 L14.5,12.1 C14.5,12.3 14.7,12.5 14.9,12.5 L19.1,12.5 C19.3,12.5 19.5,12.3 19.5,12.1 L19.5,7.9 C19.5,7.7 19.3,7.5 19.1,7.5 Z" id="Shape"></path>
+                  <path d="M5.1,14.5 L0.9,14.5 C0.7,14.5 0.5,14.7 0.5,14.9 L0.5,19.1 C0.5,19.3 0.7,19.5 0.9,19.5 L5.1,19.5 C5.3,19.5 5.5,19.3 5.5,19.1 L5.5,14.9 C5.5,14.7 5.3,14.5 5.1,14.5 Z" id="Shape"></path>
+                  <path d="M5.1,0.5 L0.9,0.5 C0.7,0.5 0.5,0.7 0.5,0.9 L0.5,5.1 C0.5,5.3 0.7,5.5 0.9,5.5 L5.1,5.5 C5.3,5.5 5.5,5.3 5.5,5.1 L5.5,0.9 C5.5,0.7 5.3,0.5 5.1,0.5 Z" id="Shape"></path>
+                  <path d="M12.1,0.5 L7.9,0.5 C7.7,0.5 7.5,0.7 7.5,0.9 L7.5,5.1 C7.5,5.3 7.7,5.5 7.9,5.5 L12.1,5.5 C12.3,5.5 12.5,5.3 12.5,5.1 L12.5,0.9 C12.5,0.7 12.3,0.5 12.1,0.5 Z" id="Shape"></path>
+                  <path d="M19.1,0.5 L14.9,0.5 C14.7,0.5 14.5,0.7 14.5,0.9 L14.5,5.1 C14.5,5.3 14.7,5.5 14.9,5.5 L19.1,5.5 C19.3,5.5 19.5,5.3 19.5,5.1 L19.5,0.9 C19.5,0.7 19.3,0.5 19.1,0.5 Z" id="Shape"></path>
+                  <path d="M12.1,14.5 L7.9,14.5 C7.7,14.5 7.5,14.7 7.5,14.9 L7.5,19.1 C7.5,19.3 7.7,19.5 7.9,19.5 L12.1,19.5 C12.3,19.5 12.5,19.3 12.5,19.1 L12.5,14.9 C12.5,14.7 12.3,14.5 12.1,14.5 Z" id="Shape"></path>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="app--display">
+          <div class="app-container">
+            <div class="app-grid">
+              <figure class="app-image">
+                <img src="https://gmailapp.surge.sh/assets/images/chrome.png" alt="">
+              </figure>
+              <figure class="app-image">
+                <img src="https://gmailapp.surge.sh/assets/images/calendar.png" alt="">
+              </figure>
+              <figure class="app-image">
+                <img src="https://gmailapp.surge.sh/assets/images/contacts.png" alt="">
+              </figure>
+              <figure class="app-image">
+                <img src="https://gmailapp.surge.sh/assets/images/docs.png" alt="">
+              </figure>
+              <figure class="app-image">
+                <img src="https://gmailapp.surge.sh/assets/images/drive.png" alt="">
+              </figure>
+              <figure class="app-image">
+                <img src="https://gmailapp.surge.sh/assets/images/forms.png" alt="">
+              </figure>
+              <figure class="app-image">
+                <img src="https://gmailapp.surge.sh/assets/images/allo.png" alt="">
+              </figure>
+              <figure class="app-image">
+                <img src="https://gmailapp.surge.sh/assets/images/fonts.png" alt="">
+              </figure>
+              <figure class="app-image">
+                <img src="https://gmailapp.surge.sh/assets/images/plus.png" alt="">
+              </figure>
+              <figure class="app-image">
+                <img src="https://gmailapp.surge.sh/assets/images/maps.png" alt="">
+              </figure>
+              <figure class="app-image">
+                <img src="https://gmailapp.surge.sh/assets/images/news.png" alt="">
+              </figure>
+              <figure class="app-image">
+                <img src="https://gmailapp.surge.sh/assets/images/photos.png" alt="">
+              </figure>
+              <figure class="app-image">
+                <img src="https://gmailapp.surge.sh/assets/images/search.png" alt="">
+              </figure>
+              <figure class="app-image">
+                <img src="https://gmailapp.surge.sh/assets/images/sheets.png" alt="">
+              </figure>
+              <figure class="app-image">
+                <img src="https://gmailapp.surge.sh/assets/images/slides.png" alt="">
+              </figure>
+              <figure class="app-image">
+                <img src="https://gmailapp.surge.sh/assets/images/youtube.png" alt="">
+              </figure>
+            </div>
+            <div class="is-app--triangle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="chats">
+    <div class="inner">
+      <div class="sender-chat">
+        <div class="sender_avatar hasAv chatImg">
+        </div>
+        <div class="sender_name hasCo">
+          <p class="sender-name chatName">Name</p>
+          <p class="sender-email chatEmail">Email</p>
+        </div>
+      </div>
+      <div class="chat-view"> 
+        <div class="fakeMsg">
+          <p>
+          	<span class="getName chatName">Name: </span>
+          	<span class="chatMsg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam doloribus rerum, dolorum a nisi temporibus minima id commodi alias non quaerat! Fugit, neque unde. Officia vel dignissimos libero blanditiis commodi.</span>
+          </p>
+        </div>
+      </div>
+      <div class="msg-chat">
+        <form action="" class="Form">
+          <textarea class="txtArea" name="" id="" placeholder="Send a Message"></textarea>
+          <input type="submit" value="Send">
+        </form>
+      </div>
+    </div>
+    <div class="closeChat">
+      <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
+      	<line x1="18" y1="6" x2="6" y2="18"></line>
+      	<line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </div>
+  </section>
+  <section class="view">
+    <section class="emails is-component">
+      <div class="emails--inner">
+        <button class="compose">
+          compose
+        </button>
+        <div class="search-bar">
+          <form action="" class="search-form">
+            <input type="text" name="" placeholder="Search Emaill">
+            <input type="submit" value="Search">
+          </form>
+        </div>
+        <div class="is-email--container unread">
+          <h1 class="email-type">Unread 
+            <div class="check">
+              <input  type="checkbox" name="" id="checker">
+              <label class="checkLabel" for="checker">
+                <svg class="checkMark" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check">
+                	<polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </label>
+            </div>
+          </h1>
+          <p class="caughtUp">You are all caught up!</p>
+          <!-- Unread Email Cards -->
+          <div class="email-card">
+            <div class="is-email--section has-img">
+              <div class="sender-img" style="background-image: url(https://gmailapp.surge.sh/assets/images/bradsmith.jpg);">
+              </div>
+            </div>
+            <div class="is-email--section has-content">
+              <div class="sender-inner--content">
+                <p class="sender-name">Brad Smith</p>
+                <p class="email-sum">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores doloremque sequi, tempore sit autem alias.....</p>
+              </div>
+            </div>
+            <div class="email-action">
+              <span><img src="https://gmailapp.surge.sh/assets/images/flag.png" alt="" class="action-icon"></span>
+              <span class="trash"><img src="https://gmailapp.surge.sh/assets/images/trashcan.png" alt=""class="action-icon"></span>
+              <span><img src="https://gmailapp.surge.sh/assets/images/reply.png" alt="" class="action-icon"></span>
+            </div>
+          </div>
+          <div class="email-card">
+            <div class="is-email--section has-img">
+              <div class="sender-img" style="background-image: url(https://gmailapp.surge.sh/assets/images/adam.jpg);">
+              </div>
+            </div>
+            <div class="is-email--section has-content">
+              <div class="sender-inner--content">
+                <p class="sender-name">Adam Lee</p>
+                <p class="email-sum">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores doloremque sequi.....</p>
+              </div>
+            </div>
+            <div class="email-action">
+              <span><img src="https://gmailapp.surge.sh/assets/images/flag.png" alt="" class="action-icon"></span>
+              <span class="trash"><img src="https://gmailapp.surge.sh/assets/images/trashcan.png" alt=""class="action-icon"></span>
+              <span><img src="https://gmailapp.surge.sh/assets/images/reply.png" alt="" class="action-icon"></span>
+            </div>
+          </div>
+          <div class="email-card">
+            <div class="is-email--section has-img">
+              <div class="sender-img" style="background-image: url(https://gmailapp.surge.sh/assets/images/ramey.jpg);">
+              </div>
+            </div>
+            <div class="is-email--section has-content">
+              <div class="sender-inner--content">
+                <p class="sender-name">Ramey Krosky</p>
+                <p class="email-sum">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores doloremque sequi, tempore.....</p>
+              </div>
+            </div>
+            <div class="email-action">
+              <span>
+              	<img src="https://gmailapp.surge.sh/assets/images/flag.png" alt="" class="action-icon">
+              </span>
+              <span class="trash">
+              	<img src="https://gmailapp.surge.sh/assets/images/trashcan.png" alt=""class="action-icon">
+              </span>
+              <span>
+              	<img src="https://gmailapp.surge.sh/assets/images/reply.png" alt="" class="action-icon">
+              </span>
+            </div>
+          </div>
+        </div>   
+      <div>
+        <h1 class="email-type">Inbox
+          <div class="check">
+            <input  type="checkbox" name="" id="checkerInbox">
+            <label class="checkLabelInbox" for="checkerInbox">
+              <svg class="checkMarkInbox" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check">
+              	<polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </label>
+          </div>
+        </h1>
+        <!-- inbox email cards -->
+        <div class="inbox">
+          <div class="email-card">
+            <div class="is-email--section has-img">
+              <div class="sender-img" style="background-image: url(https://gmailapp.surge.sh/assets/images/mandy.jpg);">
+              </div>
+            </div>
+            <div class="is-email--section has-content">
+              <div class="sender-inner--content">
+                <p class="sender-name">Mandy Jenson</p>
+                <p class="email-sum">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores doloremque sequi, tempore.....</p>
+              </div>
+            </div>
+            <div class="email-action">
+              <span>
+              	<img src="https://gmailapp.surge.sh/assets/images/flag.png" alt="" class="action-icon">
+              </span>
+              <span>
+              	<img src="https://gmailapp.surge.sh/assets/images/trashcan.png" alt="" class="action-icon trash">
+              </span>
+              <span>
+              	<img src="https://gmailapp.surge.sh/assets/images/reply.png" alt="" class="action-icon">
+              </span>
+            </div>
+          </div>
+          <div class="email-card">
+            <div class="is-email--section has-img">
+              <div class="sender-img" style="background-image: url(https://gmailapp.surge.sh/assets/images/alex.jpg);">
+              </div>
+            </div>
+            <div class="is-email--section has-content">
+              <div class="sender-inner--content">
+                <p class="sender-name">Alex James</p>
+                <p class="email-sum">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores doloremque sequi, tempore.....</p>
+              </div>
+            </div>
+            <div class="email-action">
+              <span>
+              	<img src="https://gmailapp.surge.sh/assets/images/flag.png" alt="" class="action-icon">
+              </span>
+              <span>
+              	<img src="https://gmailapp.surge.sh/assets/images/trashcan.png" alt="" class="action-icon trash">
+              </span>
+              <span>
+              	<img src="https://gmailapp.surge.sh/assets/images/reply.png" alt="" class="action-icon">
+              </span>
+            </div>
+          </div>
+          <div class="email-card">
+            <div class="is-email--section has-img">
+              <div class="sender-img" style="background-image: url(https://gmailapp.surge.sh/assets/images/kyle.jpg);">
+              </div>
+            </div>
+            <div class="is-email--section has-content">
+              <div class="sender-inner--content">
+                <p class="sender-name">Kyle Jordan</p>
+                <p class="email-sum">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores doloremque sequi, tempore.....</p>
+              </div>
+            </div>
+            <div class="email-action">
+              <span>
+              	<img src="https://gmailapp.surge.sh/assets/images/flag.png" alt="" class="action-icon">
+              </span>
+              <span>
+              	<img src="https://gmailapp.surge.sh/assets/images/trashcan.png" alt="" class="action-icon trash">
+              </span>
+              <span>
+              	<img src="https://gmailapp.surge.sh/assets/images/reply.png" alt="" class="action-icon">
+              </span>
+            </div>
+          </div>
+          <div class="email-card">
+            <div class="is-email--section has-img">
+              <div class="sender-img" style="background-image: url(https://gmailapp.surge.sh/assets/images/dougjay.jpg);">
+              </div>
+            </div>
+            <div class="is-email--section has-content">
+              <div class="sender-inner--content">
+                <p class="sender-name">Doug Jay</p>
+                <p class="email-sum">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores doloremque sequi, tempore.....</p>
+              </div>
+            </div>
+            <div class="email-action">
+              <span>
+              	<img src="https://gmailapp.surge.sh/assets/images/flag.png" alt="" class="action-icon">
+              </span>
+              <span>
+              	<img src="https://gmailapp.surge.sh/assets/images/trashcan.png" alt="" class="action-icon trash">
+              </span>
+              <span>
+              	<img src="https://gmailapp.surge.sh/assets/images/reply.png" alt="" class="action-icon">
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="full-email-view is-component">
+    <div class="email-view--inner">
+      <div class="from">
+        <div class="fromImg isFrom-component" style="background-image: url(https://gmailapp.surge.sh/assets/images/bradsmith.jpg);">   
+        </div>
+        <div class="fromSub isFrom-component">
+          <div class="emailSection">
+            <span class="is-default">From:</span> 
+            <strong class="fromName">Brad Smith</strong>
+            <span class="emailBubble">bradsmith@gmail.com</span>
+          </div>
+          <div class="emailSection">
+            <span class="is-default">To:</span> 
+            <strong class="clientName">You</strong>
+            <i>kenny.krosky@gmail.com</i>
+          </div>
+          <div class="emailSection">
+            <span class="is-default">Subject:</span> 
+            Hey Man, just got back in town. Check out these awesome pictures from my trip!
+          </div>
+        </div>
+      </div>
+      <div class="the-email">
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum.</p>
+      </div>
+      <div class="the-reply">
+        <div class="is-section hasImgReply">
+          <img class="replyImg" src="https://gmailapp.surge.sh/assets/images/userimg.jpg" alt="">
+        </div>
+        <div class="is-section hasSettingsReply">
+          <div class="emailSection">
+            Replaying as: <i>kenny.krosky@gmail.com</i>
+          </div>
+          <div class="emailSection">Forward: 
+            <span class="addForward">Add Email Address</span>
+          </div>
+        </div>
+      </div>
+      <div class="isReplyParent">
+        <div class="replyBox">
+          <textarea name="" id=""></textarea>
+          <input type="submit" value="Reply">
+          <div class="replyActions">
+            <ul>
+              <li>
+              	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash">
+              		<polyline points="3 6 5 6 21 6"></polyline>
+              		<path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+              	</svg>
+              </li>
+              <li>
+              	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download">
+              		<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              		<polyline points="7 10 12 15 17 10"></polyline>
+              		<line x1="12" y1="15" x2="12" y2="3"></line>
+              	</svg>
+              </li>
+              <li>
+              	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-dollar-sign">
+              		<line x1="12" y1="1" x2="12" y2="23"></line>
+              		<path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              	</svg>
+              </li>
+              <li>
+              	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-paperclip">
+              		<path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path>
+              	</svg>
+              </li>
+            </ul>
+          </div>
+        </div> 
+      </div>
+    </div>
+    </section>
+  </section>
+</body>
+</html>
