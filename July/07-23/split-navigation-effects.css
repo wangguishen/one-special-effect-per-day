@@ -1,0 +1,62 @@
+body {
+	margin: 0;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #000;
+	overflow: hidden;
+}
+
+.menu {
+	padding: 0;
+}
+
+.menu li{
+	margin: .5em;
+	color: transparent;
+	list-style-type: none;
+	font-size: 3em;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	border-top: 1px solid transparent;
+	line-height: 1em;
+	width: 7em;
+	position: relative;
+	transition: .3s;
+}
+
+.menu li::before,
+.menu li::after {
+	content: attr(data-text);
+	color: #ccc;
+	position: absolute;
+	top: -0.5em;
+	left: 0;
+	width: 100%;
+	transition: .3s ease-out;
+	transition-delay: .2s;
+}
+
+.menu li::before {
+	clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+}
+
+.menu li::after {
+	clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+}
+
+.menu li:hover {
+	border-top: 1px solid #ff0;
+}
+
+.menu li:nth-child(odd):hover::before,
+.menu li:nth-child(even):hover::after {
+	left: -0.15em;
+}
+
+.menu li:nth-child(even):hover::before,
+.menu li:nth-child(odd):hover::after {
+	left: 0.15em;
+}
